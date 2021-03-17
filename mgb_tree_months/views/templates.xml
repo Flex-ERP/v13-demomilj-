@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+    <template id="mgbassets" inherit_id="web_gantt.assets_backend">
+        <!-- adding scripts and css-->
+         <xpath expr="//script[last()]" position="after">
+             
+              <script type="text/javascript" src="/mgb_tree_months/static/src/js/mgb.js"></script>
+                <!-- <link rel="stylesheet" type="text/scss" href="/pos_multi_variant/static/src/css/label.css"/>-->
+         </xpath>
+    </template>
+<!--
+        <template id="listing">
+          <ul>
+            <li t-foreach="objects" t-as="object">
+              <a t-attf-href="#{ root }/objects/#{ object.id }">
+                <t t-esc="object.display_name"/>
+              </a>
+            </li>
+          </ul>
+        </template>
+        <template id="object">
+          <h1><t t-esc="object.display_name"/></h1>
+          <dl>
+            <t t-foreach="object._fields" t-as="field">
+              <dt><t t-esc="field"/></dt>
+              <dd><t t-esc="object[field]"/></dd>
+            </t>
+          </dl>
+        </template>
+-->
+    </data>
+</odoo>

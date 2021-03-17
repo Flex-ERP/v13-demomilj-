@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="mgb_tree_months.list">
+      <field name="name">mgb_tree_months list</field>
+      <field name="model">mgb_tree_months.mgb_tree_months</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="mgb_tree_months.action_window">
+      <field name="name">mgb_tree_months window</field>
+      <field name="res_model">mgb_tree_months.mgb_tree_months</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="mgb_tree_months.action_server">
+      <field name="name">mgb_tree_months server</field>
+      <field name="model_id" ref="model_mgb_tree_months_mgb_tree_months"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="mgb_tree_months" id="mgb_tree_months.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="mgb_tree_months.menu_1" parent="mgb_tree_months.menu_root"/>
+    <menuitem name="Menu 2" id="mgb_tree_months.menu_2" parent="mgb_tree_months.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="mgb_tree_months.menu_1_list" parent="mgb_tree_months.menu_1"
+              action="mgb_tree_months.action_window"/>
+    <menuitem name="Server to list" id="mgb_tree_months" parent="mgb_tree_months.menu_2"
+              action="mgb_tree_months.action_server"/>
+-->
+  </data>
+</odoo>
